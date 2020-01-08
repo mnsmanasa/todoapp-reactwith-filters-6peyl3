@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { removeTodo, toggleTodo } from "./globalstate/actions";
-import axios from 'axios'; 
+import axios from "axios";
 
 class Todo extends React.Component {
   constructor(props) {
@@ -10,11 +10,9 @@ class Todo extends React.Component {
   }
 
   componentDidMount() {
-    axios
-      .get('https://jsonplaceholder.typicode.com/users')
-      .then(res => {
-        console.log(res.data)
-      });
+    axios.get('http://mnsma.free.beeceptor.com/my/api/path').then(res => {
+      console.log(res.data);
+    });
   }
 
   removeTodo = event => {
