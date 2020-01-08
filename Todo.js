@@ -11,9 +11,9 @@ class Todo extends React.Component {
 
   componentDidMount() {
     axios
-      .get('https://my-json-server.typicode.com/mnsmanasa/dbrepo')
+      .get('https://jsonplaceholder.typicode.com/users')
       .then(res => {
-        console.log(res)
+        console.log(res.data)
       });
   }
 
